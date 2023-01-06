@@ -7,7 +7,10 @@ export default defineConfig({
   plugins: [
     solid({
       //@ts-ignore
-      adapter: vercel({ edge: true, prerender: true }),
+      adapter: vercel({}),
     }),
   ],
+  ssr: {
+    external: ["@prisma/client"],
+  },
 });
