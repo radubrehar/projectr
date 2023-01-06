@@ -7,7 +7,7 @@ export default defineConfig({
   plugins: [
     solid({
       //@ts-ignore
-      adapter: vercel({ prerender: true }),
+      adapter: vercel({ edge: true, prerender: true }),
     }),
   ],
   ssr: {
