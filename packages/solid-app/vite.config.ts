@@ -10,6 +10,6 @@ export default defineConfig({
   ssr: {
     external: ["@prisma/client"],
     //@ts-ignore
-    adapter: vercel({ edge: true }),
+    adapter: vercel({ edge: true, prerender: true }),
   },
 });
